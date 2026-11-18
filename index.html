@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>추천템 모음 | @pka0027</title>
+<meta name="description" content="매일 하나씩 고르는 생활 아이템. 겨울 난방부터 생활꿀팁까지, @pka0027 추천템 모음.">
+<meta name="theme-color" content="#fdf8f3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#16130f" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%9B%8D%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div class="avatar" aria-hidden="true">K</div>
+      <div class="hero-text">
+        <p class="eyebrow">@pka0027</p>
+        <h1>추천템 모음</h1>
+      </div>
+    </div>
+    <p class="sub">매일 하나씩, 직접 고른 생활 아이템</p>
+    <nav class="hero-links" aria-label="채널 링크">
+      <a href="https://x.com/pka0027" target="_blank" rel="noopener noreferrer">X @pka0027 ↗</a>
+      <a href="https://blog.naver.com/minchansalad" target="_blank" rel="noopener noreferrer">네이버 블로그 ↗</a>
+    </nav>
+  </header>
+
+  <section class="toolbar" aria-label="목록 필터">
+    <div class="chips" id="chips" role="group" aria-label="카테고리"></div>
+    <label class="search">
+      <span class="sr-only">아이템 검색</span>
+      <input id="q" type="search" placeholder="아이템 검색 (예: 전기요)" autocomplete="off">
+    </label>
+  </section>
+
+  <main>
+    <p class="result-line" id="resultLine" aria-live="polite"></p>
+    <ul class="cards" id="cards"></ul>
+  </main>
+
+  <footer class="foot">
+    <p>운영 <a href="https://x.com/pka0027" target="_blank" rel="noopener noreferrer">@pka0027</a> · <a href="https://blog.naver.com/minchansalad" target="_blank" rel="noopener noreferrer">부산스러운하루</a></p>
+    <p class="foot-note">가격·재고·평점은 등록 시점 기준이며, 지금과 다를 수 있습니다.</p>
+  </footer>
+</div>
+
+<div class="notice" role="note">
+  이 페이지의 링크는 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
