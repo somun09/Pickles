@@ -299,6 +299,7 @@ h1 {
   line-height: 1.45;
   color: var(--muted);
   text-align: center;
+  background: var(--bg);
   background: color-mix(in srgb, var(--bg) 88%, transparent);
   border-top: 1px solid var(--line);
   backdrop-filter: blur(10px);
