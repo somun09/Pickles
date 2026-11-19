@@ -45,6 +45,18 @@ assets/      카드 썸네일 이미지
 
 푸시 후 GitHub Pages가 1~2분 안에 자동 재배포한다. (페이지는 `items.json`을 캐시 없이 `?v=타임스탬프`로 불러온다.)
 
+## 배포 (처음 한 번)
+
+```bash
+cd /workspace/github-pick
+git remote add origin https://github.com/somun09/pick.git
+git push -u origin main
+# Pages 활성화 (admin 권한이 있는 토큰에서)
+gh api -X POST repos/somun09/pick/pages -f source[branch]=main -f source[path]=/
+```
+
+이후 일상 갱신은 `git add -A && git commit -m "아이템 추가" && git push` 로 끝난다.
+
 ## 고지
 
 이 페이지의 링크는 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다. (화면 하단 고정)
