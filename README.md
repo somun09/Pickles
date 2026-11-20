@@ -94,17 +94,21 @@ assets/      카드 썸네일 이미지
 | cpa-coway-purifier-rental | 코웨이 정수기 렌탈 | https://y184xqwc0z.sens.kr |
 | cpa-home-internet | 우리들이 사용하는 인터넷 | https://fg26t6kd3c.sens.kr |
 
-## 배포 (처음 한 번)
+## 배포
+
+- 사이트: https://somun09.github.io/Pickles/ (GitHub Pages, HTTPS 강제, 소스 `gh-pages` / `/`)
+- 작업 브랜치는 `main`, 배포 브랜치는 `gh-pages`. 2026-11-21 최초 배포 때 Pages 생성 API는 Pickle의 GitHub 연동 권한에 `pages=write` 가 없어 403이 났고, `gh-pages` 브랜치를 푸시하자 GitHub이 Pages를 자동 활성화해 배포됐다.
+
+일상 갱신:
 
 ```bash
 cd /workspace/github-pick
-git remote add origin https://github.com/somun09/Pickles.git
-git push -u origin main
-# Pages 활성화 (admin 권한이 있는 토큰에서)
-gh api -X POST repos/somun09/Pickles/pages -f source[branch]=main -f source[path]=/
+git add -A && git commit -m "아이템 추가"
+git push origin main           # 작업 브랜치
+git push origin main:gh-pages  # 배포 브랜치 동기화
 ```
 
-이후 일상 갱신은 `git add -A && git commit -m "아이템 추가" && git push` 로 끝난다. 푸시 후 Pages가 1~2분 안에 자동 재배포한다(페이지는 `items.json` 을 `?v=타임스탬프`로 캐시 없이 불러온다).
+푸시 후 Pages가 1~2분 안에 자동 재배포한다(페이지는 `items.json` 을 `?v=타임스탬프`로 캐시 없이 불러온다). Settings → Pages 의 소스를 `main` / (root) 로 바꾸면 마지막 줄은 필요 없다.
 
 ## 고지
 
