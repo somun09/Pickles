@@ -2,7 +2,7 @@
 
 `@pka0027` 의 링크 허브. 쿠팡 파트너스 추천템(겨울·자취템)과 재송동 생활정보·상담 링크(당근 비즈프로필, 상담 신청서), 블로그·X 채널을 한 화면에 모은 모바일 우선 정적 페이지. GitHub Pages로 서비스한다.
 
-- 페이지: https://somun09.github.io/pick/
+- 페이지: https://somun09.github.io/Pickles/
 - 채널: X [@pka0027](https://x.com/pka0027) · 네이버 블로그 [부산스러운하루](https://blog.naver.com/minchansalad) · 당근 [온라인 마케터 생활정보(재송동)](https://www.daangn.com/kr/local-profile/%EC%98%A8%EB%9D%BC%EC%9D%B8-%EB%A7%88%EC%BC%80%ED%84%B0-%EC%83%9D%ED%99%9C%EC%A0%95%EB%B3%B4-w1e58ifivdph/)
 
 ## 구조
@@ -98,10 +98,10 @@ assets/      카드 썸네일 이미지
 
 ```bash
 cd /workspace/github-pick
-git remote add origin https://github.com/somun09/pick.git
+git remote add origin https://github.com/somun09/Pickles.git
 git push -u origin main
 # Pages 활성화 (admin 권한이 있는 토큰에서)
-gh api -X POST repos/somun09/pick/pages -f source[branch]=main -f source[path]=/
+gh api -X POST repos/somun09/Pickles/pages -f source[branch]=main -f source[path]=/
 ```
 
 이후 일상 갱신은 `git add -A && git commit -m "아이템 추가" && git push` 로 끝난다. 푸시 후 Pages가 1~2분 안에 자동 재배포한다(페이지는 `items.json` 을 `?v=타임스탬프`로 캐시 없이 불러온다).
